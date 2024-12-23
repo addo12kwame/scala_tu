@@ -1,0 +1,43 @@
+# Scala and sbt files
+*.class
+*.log
+*.swp
+*.swo
+*.bak
+*.tmp
+*.idea/
+*.iml
+target/
+project/target/
+project/project/
+
+# IntelliJ-specific
+.idea/
+*.iml
+out/
+.idea_modules/
+
+# SBT-specific
+.project/
+.sbt/boot/
+.sbt/target/
+
+# Eclipse-specific (if applicable)
+.eclipse/
+.settings/
+
+# Local history for IntelliJ
+.idea/.idea_modules/
+
+# User-specific files
+*.iws
+*.iml
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/vcs.xml
+.idea/misc.xml
+
+# Other
+.DS_Store
+Thumbs.db
