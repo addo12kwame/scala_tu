@@ -41,3 +41,5 @@ out/
 # Other
 .DS_Store
 Thumbs.db
+*.bsp/
+*.scala-build/
