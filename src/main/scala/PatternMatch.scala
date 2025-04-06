@@ -9,15 +9,25 @@ object PatternMatch extends App {
 
   val tuple = ("Kwame", "Ama")
   val pat = tuple match
-
+    
 
     /*
-     * Pattern match with tupe
+     * Pattern match with tuple
      */
     case (first, last) => f"$first is a boy and $last is a girl"
   println(pat)
+//
+//  val patObject = Person match
+//    case Person(n, a) => f"My name is $n and I am $a years old"
+    
+    
+//  println(patObject)
+val x: Person = Person("Kwame", 29)
 
-  val patObject = Pers
+  c(x)
+
+
+  val someName: kwame = "kwame"
 }
 
 case class Person(name: String, age: Int) {
@@ -29,5 +39,14 @@ case class Person(name: String, age: Int) {
   }
 
 }
+
+
+type kwame = String
+
+
+def c(person: Person): Unit = person match
+  case Person(first, second) => println(s"$first -> $second")
+  case _ => println("Match")
+
 
 

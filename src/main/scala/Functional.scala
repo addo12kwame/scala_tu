@@ -47,6 +47,9 @@ val t = for {
 
 var aList = List("a", "b", "c")
 
+
+
+
 var aList2: List[String] = aList.flatMap(x => List("b"))
 
 aList = "a" +: aList
@@ -65,7 +68,7 @@ val patMatch = aList(3) match
 
 
 println(patMatch)
-
+println(t)
   //println(stringCon("I love Scala"))
 }
 

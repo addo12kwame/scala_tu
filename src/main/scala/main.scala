@@ -56,6 +56,20 @@ import scala.collection.mutable.ArrayBuffer
 
    Mysingleton("Kwame")
 
+   val names : String = scala.io.StdIn.readLine()
+   println(names)
+   
+   
+   
+
+
+   val someList = List(1,2,3)
+   val getList = someList match
+      case List(1,2,_) => "List some"
+      case _ => " Unknowned"
+
+   println(getList)
+
 
 
    println(Dog.canLiveIndefinitely)
@@ -220,8 +234,8 @@ val canLiveIndefinitely = false
  * Implicit companion with apply method. You can instantiate without the new key word
  * like val newPerson = Person("kwame",29)
  */
-case class Person(name: String,age: Int) {
-}
+//case class Person(name: String,age: Int) {
+//}
 
 abstract class MyAnimals[T] {
    val myList: ArrayBuffer[T]
