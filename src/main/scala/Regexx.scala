@@ -3,7 +3,7 @@ object Regexx extends App {
 
 
 
-  val email = "k".r
+  private val email = "k".r
   val mylist = List("a","b")
   val arr = List("1", "3", "3", "7", "c", "0", "d", "3")
 
@@ -20,7 +20,7 @@ object Regexx extends App {
 
   println(answer)
 
-  var someV:String = ""
+  private var someV:String = ""
   for a <- fin do { someV += a }
 
   println(someV)
