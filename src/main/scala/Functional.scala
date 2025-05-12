@@ -70,9 +70,10 @@ object Functional  {
 
 
     val oneHalf = new Rational(1, 2)
+    val someLarge = new Rational(66, 42)
     val twoThirds = new Rational(2,3)
 
-    val answer = oneHalf add twoThirds
+    val answer = oneHalf * twoThirds + oneHalf
 
     println(answer)
   }

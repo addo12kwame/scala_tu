@@ -1,10 +1,15 @@
+import scala.annotation.tailrec
+
 class Rational(n : Int, d: Int) {
   /*
    * This is a check the parameter with require(boolean)
    */
   require(d != 0)
-  val numer: Int = n
-  val denom: Int = d
+  
+  private val g:Int = gcd(n.abs,d.abs)
+  
+  val numer: Int = n/g
+  val denom: Int = d/g
 
   /*
    * Overriding the toString to return a meaningful message
@@ -19,12 +24,14 @@ class Rational(n : Int, d: Int) {
   def this(n:Int) = this(n,1)
 
 
-  def add(other: Rational): Rational =
+  def +(other: Rational): Rational =
     new Rational(
       numer * other.denom + other.numer * denom,
       denom * other.denom
     )
 
+  def *(other: Rational): Rational =
+    new Rational(numer * other.numer, denom * other.denom)
 
   def lessThan(other:Rational): Boolean =
     this.numer * other.denom < this.denom * other.numer
@@ -32,4 +39,7 @@ class Rational(n : Int, d: Int) {
   def max(other: Rational): Rational =
     if this.lessThan(other) then other else this
 
+  
+  private def gcd(a: Int, b:Int): Int =
+    if (b == 0) a else gcd(b, a % b)
 }
